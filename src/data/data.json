@@ -1,0 +1,188 @@
+{
+  "Header": {
+    "title": "EVOLUTIA",
+    "paragraph": "Acelera el crecimiento de tu negocio con Agentes de Inteligencia Artificial. ¿Más rentabilidad?. Evolutia lo hace posible ¿Más eficiencia? Evolutia lo hace posible. ¿Tu negocio? Evolutia lo lleva al siguiente nivel."
+  },
+  "About": {
+    "paragraph": "Somos Evolutia, un equipo de estudiantes de Ingeniería Informática en la Universidad de Santiago de Compostela (USC) con una misión clara: transformar la automatización empresarial con agentes de IA. \n\nCreemos en el poder de la inteligencia artificial para optimizar procesos, reducir costos y aumentar la eficiencia. Nuestra pasión por la innovación nos lleva a desarrollar soluciones que permiten a las empresas crecer, escalar y mejorar su rendimiento.\n\nNos especializamos en la implementación de Agentes de IA diseñados para automatizar tareas, mejorar la atención al cliente y optimizar la toma de decisiones. Buscamos hacer que la IA sea accesible, intuitiva y altamente efectiva para cualquier tipo de negocio.\n\nEl futuro es la automatización inteligente. Con Evolutia, las empresas se vuelven más eficientes, rentables y competitivas.",
+    
+    "Why": [
+      "Automatización inteligente para optimizar la productividad y reducir tareas repetitivas.",
+      "Atención al cliente mejorada con respuestas automáticas y soporte 24/7.",
+      "Integración con sistemas existentes para mejorar la eficiencia operativa.",
+      "Reducción de costos al minimizar la intervención manual y optimizar los recursos."
+    ],
+  
+    "Why2": [
+      "Personalización de flujos de trabajo para adaptarse a las necesidades del negocio.",
+      "Análisis predictivo basado en datos para mejorar la toma de decisiones.",
+      "Escalabilidad sin límites, adaptándose al crecimiento empresarial.",
+      "Mejora continua a través de la evolución de modelos de IA en tiempo real."
+    ]
+  }
+  ,
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-bolt",
+      "name": "Automatización de Procesos",
+      "text": "Optimiza tareas repetitivas como gestión de datos, reportes y flujos de trabajo, permitiendo a las empresas centrarse en la estrategia."
+    },
+    {
+      "icon": "fa fa-phone-volume",
+      "name": "Atención al Cliente 24/7",
+      "text": "Responde automáticamente consultas frecuentes, gestiona tickets de soporte y ofrece atención multicanal en chat, correo y voz."
+    },
+    {
+      "icon": "fa fa-chart-line",
+      "name": "Generación de Leads Inteligente",
+      "text": "Detecta clientes potenciales, personaliza mensajes y realiza seguimiento automatizado para aumentar conversiones."
+    },
+    {
+      "icon": "fa fa-envelope-open-text",
+      "name": "Gestión de Correos Electrónicos",
+      "text": "Clasifica, responde y organiza correos automáticamente, agilizando la comunicación interna y externa."
+    },
+    {
+      "icon": "fa fa-comments",
+      "name": "Gestión de Redes Sociales",
+      "text": "Automatiza respuestas en redes sociales, modera comentarios y analiza interacciones para mejorar la presencia digital."
+    },
+    {
+      "icon": "fa fa-cogs",
+      "name": "Integración con Sistemas",
+      "text": "Conecta con CRMs, ERPs y plataformas digitales para una sincronización eficiente y una gestión unificada de datos."
+    }
+]
+,
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-brain",
+      "title": "Memoria Perfecta",
+      "text": "Los agentes con IA siempre recuerdan y siguen instrucciones exactas, asegurando coherencia en cada interacción."
+    },
+    {
+      "icon": "fa fa-clock",
+      "title": "Disponibilidad 24/7",
+      "text": "Nunca dejan de trabajar, proporcionando servicio constante sin interrupciones."
+    },
+    {
+      "icon": "fa fa-robot",
+      "title": "Eficiencia",
+      "text": "Potencian la capacidad de tus empleados automatizando trabajos repetitivos y optimizando la productividad."
+    },
+    {
+      "icon": "fa fa-piggy-bank",
+      "title": "Ahorro de Costes",
+      "text": "Disminuyen la necesidad de recursos adicionales, reduciendo costos operativos sin comprometer la calidad del servicio."
+    }
+  ]
+}

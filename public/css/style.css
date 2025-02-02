@@ -1,0 +1,807 @@
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #dcdcdc;
+  font-weight: 400;
+  width: 100% !important;
+  height: 100% !important;
+  background: #121212; /* Fondo oscuro */
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 800;
+  font-size: 36px;
+  color: #ffffff;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+h4 {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+p {
+  font-size: 15px;
+  color: #dcdcdc;
+}
+p.intro {
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+a {
+  color: #ff66b2;
+  font-weight: 400;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #9b59b6;
+}
+ul,
+ol {
+  list-style: none;
+}
+ul,
+ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+}
+hr {
+  height: 2px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  margin-bottom: 20px;
+  border: 0;
+}
+/* Navigation */
+#menu {
+  padding: 15px;
+  transition: all 0.8s;
+}
+
+#menu.navbar-default {
+  background-color: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+#menu a.navbar-brand {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+#menu.navbar-default .navbar-nav > li > a {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  color: #dcdcdc;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px 2px;
+  border-radius: 0;
+  margin: 9px 20px 0;
+  position: relative; /* Necesario para el efecto */
+}
+
+/* Barra de subrayado en hover: Crece desde la izquierda */
+#menu.navbar-default .navbar-nav > li > a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; /* Se inicia desde la izquierda */
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  transition: width 0.2s ease-in-out;
+}
+
+/* Cuando el usuario hace hover, la barra crece hacia la derecha */
+#menu.navbar-default .navbar-nav > li > a:hover:after {
+  width: 100%;
+}
+
+/* Al quitar el hover, la barra desaparece */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+
+/* Mantiene el formato de la navbar-toggle */
+.navbar-toggle {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #1a1a1a;
+  border-color: #ff66b2;
+}
+
+.navbar-default .navbar-toggle:hover > .icon-bar {
+  background-color: #ff66b2;
+}
+
+/* Títulos de sección */
+.section-title {
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.section-title h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 0; /* Subrayado alineado a la izquierda */
+}
+
+.section-title p {
+  font-size: 18px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding-left: 20px; /* Espacio fijo desde el borde izquierdo */
+}
+
+.navbar-logo {
+  height: 50px; /* Tamaño por defecto */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Cambia la imagen y el tamaño en pantallas grandes */
+@media (min-width: 1024px) {
+  .navbar-logo {
+    content: url("/img/LogoCompleto.jpg"); /* Imagen para pantallas grandes */
+    height: 50px;
+  }
+}
+
+/* Cambia la imagen y el tamaño en pantallas medianas */
+@media (max-width: 768px) {
+  .navbar-logo {
+    content: url("/img/LogoCubo.jpg"); /* Imagen para móviles */
+    height: 40px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .navbar-brand {
+    padding-left: 10px;
+  }
+  .navbar-logo {
+    height: 30px;
+  }
+}
+
+
+/* Botón personalizado */
+.btn-custom {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: linear-gradient(to right, #ff66b2, #9b59b6);
+  padding: 14px 34px;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(255, 102, 178, 0.3); /* Glow inicial */
+}
+
+/* Efecto de foco (hover) */
+.btn-custom:hover,
+.btn-custom:focus {
+  color: #fff;
+  background: linear-gradient(to right, #ff4da6, #a64dff);
+  box-shadow: 0px 0px 25px rgba(255, 102, 178, 0.8); /* Glow más fuerte */
+  transform: scale(1.05); /* Pequeño zoom */
+}
+
+/* Efecto de presión al hacer clic */
+.btn-custom:active,
+.btn-custom.active {
+  transform: scale(0.98); /* Simula presión */
+  box-shadow: 0px 0px 15px rgba(255, 102, 178, 0.6);
+}
+
+/* Elimina bordes y efectos indeseados */
+a:focus,
+.btn-custom:focus,
+.btn-custom:active:focus,
+.btn-custom.active:focus,
+.btn-custom.focus,
+.btn-custom:active.focus,
+.btn-custom.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+
+
+/* Header Section */
+.intro {
+  display: table;
+  width: 100%;
+  padding: 0;
+  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.intro .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+.intro h1 {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 82px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.intro h1 span {
+  font-weight: 800;
+  color: #ff66b2;
+}
+.intro p {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+header .intro-text {
+  padding-top: 350px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+/* Features Section */
+#features {
+  background: #1a1a1a;
+  padding: 100px 0; /* Se iguala a las demás secciones */
+  margin: 0 auto; /* Centrado */
+  text-align: center; /* Asegura alineación */
+}
+#features i.fa {
+  font-size: 38px;
+  margin-bottom: 20px;
+  transition: all 0.5s;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  padding: 30px 0;
+  border-radius: 50%;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+#features .container {
+  max-width: 1200px; /* Asegura consistencia con otras secciones */
+  margin: 0 auto;
+}
+#features .section-title {
+  margin-bottom: 50px;
+}
+#features h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  position: relative;
+}
+#features h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#features .btn-custom {
+  margin-top: 25px;
+}
+
+/* About Section */
+#about {
+  padding: 100px 0;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+/* TÍTULO PRINCIPAL */
+#about h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+/* SUBRAYADO DEGRADADO */
+#about h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* TEXTO PRINCIPAL */
+#about p {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #dcdcdc;
+  text-align: center;
+}
+
+/* TÍTULO "¿POR QUÉ ELEGIRNOS?" MÁS PEQUEÑO */
+#about h3 {
+  font-size: 20px; /* Reducimos el tamaño */
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+/* SUBRAYADO MÁS PEQUEÑO */
+#about h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* LISTA DE BENEFICIOS */
+#about .about-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#about .about-list li {
+  font-size: 15px; /* Reducimos un poco el tamaño */
+  color: #dcdcdc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ÍCONO DE CHECK */
+#about .about-list li i {
+  color: #ff66b2;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* EFECTO HOVER EN LISTA */
+#about .about-list li:hover i {
+  transform: scale(1.2);
+}
+
+#about .btn-custom {
+  margin-top: 50px;
+}
+
+/*//////////////////*/
+/* Services Section */
+#services {
+  padding: 100px 0;
+  background: #222222; /* Fondo negro */
+  color: #ffffff;
+}
+#services .service-desc {
+  margin: 10px 10px 20px;
+}
+#services h2 {
+  color: #ffffff;
+}
+#services .section-title h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  margin-left: -30px;
+  left: 50%;
+}
+#services i.fa {
+  font-size: 42px;
+  width: 120px;
+  height: 120px;
+  padding: 40px 0;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+}
+#services h3 {
+  font-weight: 500;
+  padding: 5px 0;
+  color: #ffffff;
+}
+#services p {
+  color: rgba(255, 255, 255, 0.85);
+}
+#services .service-desc {
+  margin-bottom: 40px;
+}
+#services .btn-custom {
+  margin-top: 25px;
+}
+
+/* Gallery Section */
+#portfolio {
+  padding: 100px 0;
+  background: #222222;
+  text-align: center;
+}
+
+/* Ajuste del título con subrayado centrado */
+#portfolio .section-title {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#portfolio .section-title h2 {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#portfolio .section-title h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Estilo de las imágenes del portfolio */
+.portfolio-item {
+  margin: 10px;
+  padding: 0;
+}
+
+/* Hover effect en las imágenes */
+.portfolio-item .hover-bg {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.hover-bg .hover-text {
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    rgba(255, 102, 178, 0.8) 0%,
+    rgba(155, 89, 182, 0.8) 100%
+  );
+  padding: 30% 0 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Texto dentro del hover */
+.hover-bg .hover-text > h4 {
+  opacity: 0;
+  color: #ffffff;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Efecto cuando se pasa el mouse */
+.hover-bg:hover .hover-text > h4 {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.hover-bg:hover .hover-text {
+  opacity: 1;
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 100px 0 60px;
+  background: #1a1a1a; /* Fondo negro */
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#contact .section-title {
+  margin-bottom: 40px;
+}
+
+#contact .section-title p {
+  font-size: 16px;
+  color: #dcdcdc;
+}
+
+#contact h2 {
+  color: #ffffff;
+  margin-top: 5px; /* Menos separación */
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+#contact .section-title h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#contact h3 {
+  color: #ffffff;
+  font-size: 18px; /* Más pequeño */
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+#contact form {
+  padding-top: 20px;
+}
+
+#contact .text-danger {
+  color: #ff4d4d;
+  text-align: left;
+}
+
+#contact .btn-custom {
+  margin: 30px 0;
+  background: transparent;
+  border: 2px solid #ff66b2;
+  color: #ff66b2;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto glow en botón */
+#contact .btn-custom:hover {
+  color: #ffffff;
+  background: #ff66b2;
+  box-shadow: 0 0 15px #ff66b2; /* Efecto de foco */
+  transform: scale(1.05);
+}
+
+label {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  float: left;
+  color: #ffffff;
+}
+
+#contact .form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #222;
+  border: 2px solid #ff66b2;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto cuando el input está enfocado */
+#contact .form-control:focus {
+  border-color: #9b59b6;
+  outline: 0;
+  box-shadow: 0 0 10px #9b59b6;
+}
+
+/* Placeholder más visible */
+.form-control::placeholder {
+  color: #bbb;
+}
+
+#contact .contact-item {
+  margin: 20px 0;
+}
+
+#contact .contact-item span {
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Redes sociales */
+#contact .social {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#contact .social ul {
+  padding: 0;
+  margin: 0;
+}
+
+#contact .social ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#contact .social i.fab {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 15px 0;
+  border: 2px solid #ff66b2;
+  color: #ff66b2;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto Glow al pasar el ratón */
+#contact .social i.fab:hover {
+  color: #ffffff;
+  background: #ff66b2;
+  box-shadow: 0 0 15px #ff66b2;
+  transform: scale(1);
+}
+
+.copyright {
+  margin-top: 40px;
+  padding-top: 20px;
+  color: #dcdcdc;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* Footer Section */
+#footer {
+  background: #000000;
+  padding: 30px 0;
+}
+#footer p {
+  color: #dcdcdc;
+  font-size: 14px;
+}
+#footer a {
+  color: #ff66b2;
+}
+#footer a:hover {
+  border-bottom: 2px solid #ff66b2;
+}
+
+/* Para móviles: los elementos se ponen en vertical */
+@media (max-width: 768px) {
+  #features .row {
+    display: flex;
+    flex-direction: column; /* Se apilan en una columna */
+    align-items: center;
+    text-align: center;
+  }
+
+  #features .col-md-3 {
+    width: 100%; /* Ocupan todo el ancho */
+    margin-bottom: 20px; /* Espacio entre los elementos */
+  }
+
+  #features .col-md-3:last-child {
+    margin-bottom: 0; /* Elimina el espacio del último elemento */
+  }
+}
+
+/* Para tablets: los elementos se colocan en dos columnas */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #features .row {
+    display: flex;
+    flex-wrap: row wrap; /* Se colocan en dos filas */
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #features .col-md-3 {
+    width: 45%; /* Dos columnas */
+    text-align: center;
+  }
+}
+
+
+
+
