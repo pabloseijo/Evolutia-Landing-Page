@@ -61,8 +61,6 @@ ol {
 ul,
 ol {
   padding: 0;
-  webkit-padding: 0;
-  moz-padding: 0;
 }
 hr {
   height: 2px;
@@ -73,122 +71,139 @@ hr {
   margin-bottom: 20px;
   border: 0;
 }
-/* Navigation */
-#menu {
-  padding: 15px;
-  transition: all 0.8s;
+
+
+
+/* 🌟 Navbar Estilo Superdeportivo */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 0; /* 🔹 Reducimos padding para mejorar alineación */
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
-#menu.navbar-default {
-  background-color: #1a1a1a;
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+/* 🌟 Navbar Transparente en la Landing */
+.navbar:not(.scrolled) {
+  background: rgba(0, 0, 0, 0);
 }
 
-#menu a.navbar-brand {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
+/* 🌟 Navbar con Glassmorphism al hacer scroll */
+.navbar.scrolled {
+  background: rgba(26, 26, 26, 0.4); /* 🔥 Fondo semitransparente */
+  backdrop-filter: blur(15px); /* 🔥 Desenfoque tipo Glassmorphism */
+  -webkit-backdrop-filter: blur(15px); /* Compatibilidad con Safari */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* 🔥 Borde sutil para el efecto vidrio */
+}
+
+/* 🌟 Contenedor del Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* 🌟 Logo de la Empresa */
+.navbar-logo img {
+  height: 50px;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+  transform: translateY(-5px);
+}
+
+/* 🌟 Menú de Navegación */
+.navbar-menu {
+  display: flex;
+  align-items: center; /* 🔥 Asegura alineación vertical */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 🌟 Enlaces del menú */
+.navbar-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu li a {
+  color: white;
+  font-size: 14px;
   text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 8px 12px; /* 🔥 Ajusta el tamaño de los enlaces */
 }
 
-#menu.navbar-default .navbar-nav > li > a {
-  font-family: "Lato", sans-serif;
-  text-transform: uppercase;
-  color: #dcdcdc;
-  font-size: 15px;
-  font-weight: 400;
-  padding: 8px 2px;
-  border-radius: 0;
-  margin: 9px 20px 0;
-  position: relative; /* Necesario para el efecto */
-}
-
-/* Barra de subrayado en hover: Crece desde la izquierda */
-#menu.navbar-default .navbar-nav > li > a:after {
+/* 🌟 Efecto de Subrayado en Hover */
+.navbar-menu li a::after {
   content: "";
-  display: block;
   position: absolute;
-  left: 0; /* Se inicia desde la izquierda */
-  bottom: -3px;
+  bottom: -4px;
+  left: 0;
   width: 0;
   height: 2px;
   background: linear-gradient(to right, #ff66b2, #9b59b6);
-  transition: width 0.2s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
-/* Cuando el usuario hace hover, la barra crece hacia la derecha */
-#menu.navbar-default .navbar-nav > li > a:hover:after {
+.navbar-menu li a:hover::after {
   width: 100%;
 }
 
-/* Al quitar el hover, la barra desaparece */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-}
-
-/* Mantiene el formato de la navbar-toggle */
-.navbar-toggle {
-  border-radius: 0;
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #1a1a1a;
-  border-color: #ff66b2;
-}
-
-.navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #ff66b2;
-}
-
-/* Títulos de sección */
-.section-title {
-  margin-bottom: 70px;
-}
-
-.section-title h2 {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-}
-
-.section-title h2::after {
-  position: absolute;
-  content: "";
+/* 🌟 Botón CTA (Empieza) con Glow */
+.cta-button {
+  padding: 8px 16px; /* 🔹 Mantiene el tamaño original */
   background: linear-gradient(to right, #ff66b2, #9b59b6);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  left: 0; /* Subrayado alineado a la izquierda */
-}
-
-.section-title p {
-  font-size: 18px;
-}
-
-.navbar-brand {
+  color: white !important;
+  border-radius: 25px;
+  transition: all 0.4s ease-in-out;
+  border: none;
   display: flex;
   align-items: center;
-  padding-left: 20px; /* Espacio fijo desde el borde izquierdo */
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 40px; /* 🔹 Igual al tamaño de los enlaces */
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.3); /* 🔥 Glow inicial más sutil */
 }
 
-.navbar-logo {
-  height: 50px; /* Tamaño por defecto */
-  width: auto;
-  object-fit: contain;
+/* 🌟 Efecto de foco (hover) */
+.cta-button:hover,
+.cta-button:focus {
+  background: linear-gradient(to right, #ff4da6, #a64dff);
+  box-shadow: 0px 0px 20px rgba(255, 102, 178, 0.7); /* 🔥 Glow más fuerte */
+  transform: scale(1.05); /* Pequeño zoom */
+  color: #fff !important;
 }
 
-/* Cambia la imagen y el tamaño en pantallas grandes */
-@media (min-width: 1024px) {
-  .navbar-logo {
-    content: url("/img/LogoCompleto.jpg"); /* Imagen para pantallas grandes */
-    height: 50px;
-  }
+/* 🌟 Efecto de presión al hacer clic */
+.cta-button:active {
+  transform: scale(0.98); /* 🔥 Simula presión */
+  box-shadow: 0px 0px 15px rgba(255, 102, 178, 0.6);
 }
+
+/* 🔥 Elimina bordes y efectos indeseados */
+.cta-button:focus,
+.cta-button:active:focus {
+  outline: none;
+}
+
+
+
+
 
 /* Cambia la imagen y el tamaño en pantallas medianas */
 @media (max-width: 768px) {
@@ -262,45 +277,59 @@ a:focus,
 
 /* Header Section */
 .intro {
-  display: table;
+  position: relative;
   width: 100%;
-  padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
-  background-color: #1a1a1a; /* Fondo oscuro */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
+  min-height: 100vh;  /* Para que el fondo cubra toda la pantalla */
+  margin: 0;
+  background: #1a1a1a url("/img/intro-bg.jpg") center center no-repeat;
   background-size: cover;
-  -o-background-size: cover;
 }
+
 .intro .overlay {
-  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* sombra semitransparente */
+  z-index: 1;
 }
+
+header .intro-text {
+  position: relative; /* para que esté sobre el overlay */
+  z-index: 2;         /* texto por encima de la sombra */
+  display: flex;      /* si quieres centrar vertical/horizontal */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* ocupa al menos toda la pantalla */
+  text-align: center;
+  padding: 0 20px;    /* un poco de padding lateral */
+}
+
 .intro h1 {
   font-family: "Raleway", sans-serif;
   color: #fff;
   font-size: 82px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
   margin-bottom: 10px;
 }
+
 .intro h1 span {
   font-weight: 800;
   color: #ff66b2;
 }
+
 .intro p {
   color: #ffffff;
   font-size: 22px;
   font-weight: 300;
   line-height: 30px;
-  margin: 0 auto;
   margin-bottom: 60px;
 }
-header .intro-text {
-  padding-top: 350px;
-  padding-bottom: 200px;
-  text-align: center;
-}
+
+
 
 /* Features Section */
 #features {
@@ -358,7 +387,7 @@ header .intro-text {
 
 /* TÍTULO PRINCIPAL */
 #about h2 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
@@ -393,7 +422,7 @@ header .intro-text {
 
 /* TÍTULO "¿POR QUÉ ELEGIRNOS?" MÁS PEQUEÑO */
 #about h3 {
-  font-size: 20px; /* Reducimos el tamaño */
+  font-size: 25px; /* Reducimos el tamaño */
   font-weight: 600;
   color: #ffffff;
   margin-top: 40px;
@@ -427,7 +456,7 @@ header .intro-text {
 }
 
 #about .about-list li {
-  font-size: 15px; /* Reducimos un poco el tamaño */
+  font-size: 18px; /* Reducimos un poco el tamaño */
   color: #dcdcdc;
   margin-bottom: 10px;
   display: flex;
@@ -589,6 +618,9 @@ header .intro-text {
 }
 
 
+
+
+
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
@@ -598,6 +630,8 @@ header .intro-text {
 
 #contact .section-title {
   margin-bottom: 40px;
+  position: relative;
+  text-align: center;
 }
 
 #contact .section-title p {
@@ -630,6 +664,17 @@ header .intro-text {
   margin-bottom: 20px;
   padding-bottom: 10px;
   font-weight: 400;
+}
+
+#contact .section-title h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #ff66b2, #9b59b6);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #contact form {
@@ -750,6 +795,8 @@ label {
   font-size: 14px;
   text-align: center;
 }
+
+
 
 
 /* Footer Section */

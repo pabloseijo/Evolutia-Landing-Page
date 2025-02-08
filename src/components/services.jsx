@@ -5,7 +5,7 @@ export const Services = (props) => {
     <div id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Que pueden hacer los Agentes de IA</h2>
+          <h2>¿Qué pueden hacer los Agentes de IA?</h2>
         </div>
         <div className="row">
           {props.data

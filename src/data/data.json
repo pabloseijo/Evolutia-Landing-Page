@@ -1,7 +1,7 @@
 {
   "Header": {
     "title": "EVOLUTIA",
-    "paragraph": "Acelera el crecimiento de tu negocio con Agentes de Inteligencia Artificial. ¿Más rentabilidad?. Evolutia lo hace posible ¿Más eficiencia? Evolutia lo hace posible. ¿Tu negocio? Evolutia lo lleva al siguiente nivel."
+    "paragraph": "Más rentabilidad. Más Eficiencia. Más nivel"
   },
   "About": {
     "paragraph": "Somos Evolutia, un equipo de estudiantes de Ingeniería Informática en la Universidad de Santiago de Compostela (USC) con una misión clara: transformar la automatización empresarial con agentes de IA. \n\nCreemos en el poder de la inteligencia artificial para optimizar procesos, reducir costos y aumentar la eficiencia. Nuestra pasión por la innovación nos lleva a desarrollar soluciones que permiten a las empresas crecer, escalar y mejorar su rendimiento.\n\nNos especializamos en la implementación de Agentes de IA diseñados para automatizar tareas, mejorar la atención al cliente y optimizar la toma de decisiones. Buscamos hacer que la IA sea accesible, intuitiva y altamente efectiva para cualquier tipo de negocio.\n\nEl futuro es la automatización inteligente. Con Evolutia, las empresas se vuelven más eficientes, rentables y competitivas.",
@@ -9,15 +9,7 @@
     "Why": [
       "Automatización inteligente para optimizar la productividad y reducir tareas repetitivas.",
       "Atención al cliente mejorada con respuestas automáticas y soporte 24/7.",
-      "Integración con sistemas existentes para mejorar la eficiencia operativa.",
-      "Reducción de costos al minimizar la intervención manual y optimizar los recursos."
-    ],
-  
-    "Why2": [
-      "Personalización de flujos de trabajo para adaptarse a las necesidades del negocio.",
-      "Análisis predictivo basado en datos para mejorar la toma de decisiones.",
-      "Escalabilidad sin límites, adaptándose al crecimiento empresarial.",
-      "Mejora continua a través de la evolución de modelos de IA en tiempo real."
+      "Escalabilidad sin límites, adaptándose al crecimiento empresarial."
     ]
   }
   ,
@@ -166,23 +158,23 @@
   "Features": [
     {
       "icon": "fa fa-brain",
-      "title": "Memoria Perfecta",
-      "text": "Los agentes con IA siempre recuerdan y siguen instrucciones exactas, asegurando coherencia en cada interacción."
+      "title": "Precisión IA",
+      "text": "Los agentes de IA siguen instrucciones con exactitud, garantizando coherencia y minimizando errores en cada interacción."
     },
     {
       "icon": "fa fa-clock",
-      "title": "Disponibilidad 24/7",
-      "text": "Nunca dejan de trabajar, proporcionando servicio constante sin interrupciones."
+      "title": "Disponibilidad Continua",
+      "text": "Funcionan de manera ininterrumpida, proporcionando asistencia y soporte sin pausas las 24 horas, todos los días."
     },
     {
-      "icon": "fa fa-robot",
-      "title": "Eficiencia",
-      "text": "Potencian la capacidad de tus empleados automatizando trabajos repetitivos y optimizando la productividad."
+      "icon": "fa fa-shield-alt",
+      "title": "Entorno Seguro",
+      "text": "Cumplen altos estándares de seguridad y privacidad de datos, protegiendo información sensible en cada proceso automatizado."
     },
     {
       "icon": "fa fa-piggy-bank",
-      "title": "Ahorro de Costes",
-      "text": "Disminuyen la necesidad de recursos adicionales, reduciendo costos operativos sin comprometer la calidad del servicio."
+      "title": "Ahorro de Costos",
+      "text": "Reducen la necesidad de recursos adicionales y personal de refuerzo, optimizando la inversión sin afectar la calidad del servicio."
     }
   ]
 }

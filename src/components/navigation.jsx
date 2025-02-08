@@ -1,41 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+export const Navigation = () => {
+  const [scrolled, setScrolled] = useState(false);
 
-export const Navigation = (props) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <a className="navbar-brand page-scroll" href="#page-top">
-            <img 
-              src="/img/LogoCubo.jpg" 
-              alt="Evolutia Logo"
-              className="navbar-logo"
-            />
-          </a>
-          
-          {/* Botón del menú para móviles */}
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-        </div>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-container">
+        {/* Logo de la empresa */}
+        <a href="#home" className="navbar-logo">
+          <img src="/img/LogoCubo.png" alt="Evolutia Logo" className={`logo ${scrolled ? "small" : ""}`} />
+        </a>
 
-        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul className="nav navbar-nav navbar-right">
-            <li><a href="#features" className="page-scroll">Porque</a></li>
-            <li><a href="#services" className="page-scroll">¿Qué Hacen?</a></li>
-            <li><a href="#about" className="page-scroll">¿Quiénes Somos?</a></li>
-            <li><a href="#portfolio" className="page-scroll">Gallery</a></li>
-            <li><a href="#contact" className="page-scroll">Empieza ya</a></li>
-          </ul>
-        </div>
+        {/* Menú de navegación */}
+        <ul className="navbar-menu">
+          <li><a href="#features">¿Por qué?</a></li>
+          <li><a href="#services">¿Qué Hacen?</a></li>
+          <li><a href="#about">¿Quiénes Somos?</a></li>
+          <li><a href="#portfolio">Gallery</a></li>
+          <li><a href="#contact" className="cta-button">Empieza</a></li>
+        </ul>
       </div>
     </nav>
   );

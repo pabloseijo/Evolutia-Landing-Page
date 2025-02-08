@@ -32,21 +32,10 @@ export const About = (props) => {
 
         {/* Beneficios en dos columnas */}
         <div className="row">
-          <div className="col-md-6 text-left">
+          <div className="col-md-12 text-center">
             <ul className="about-list">
               {props.data
                 ? props.data.Why.map((d, i) => (
-                    <li key={`${d}-${i}`}>
-                      <i className="fa fa-check-circle"></i> {d.split(" ")[0]} {d.substring(d.indexOf(" "))}
-                    </li>
-                  ))
-                : "Cargando..."}
-            </ul>
-          </div>
-          <div className="col-md-6 text-left">
-            <ul className="about-list">
-              {props.data
-                ? props.data.Why2.map((d, i) => (
                     <li key={`${d}-${i}`}>
                       <i className="fa fa-check-circle"></i> {d.split(" ")[0]} {d.substring(d.indexOf(" "))}
                     </li>
