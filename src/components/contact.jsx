@@ -52,7 +52,7 @@ export const Contact = (props) => {
               <div className="section-title">
                 <h2>Contacta con nosotros</h2>
                 <p>
-                  Por favor, completa el formulario a continuación para enviarnos un correo electrónico y te responderemos lo antes posible.
+                  ¿Tienes alguna pregunta? ¿Quieres saber más sobre nuestros servicios? ¡Estamos aquí para ayudarte! Reserva una cita y te solucionaremos todas tus dudas.
                 </p>
               </div>
 
