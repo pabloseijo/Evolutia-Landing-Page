@@ -17,8 +17,8 @@ export const Navigation = () => {
       {/* Navbar principal */}
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-container">
-          <a href="#home" className="navbar-logo">
-            <img src="/img/LogoCubo.png" alt="Evolutia Logo" />
+          <a href="#header" className="navbar-logo">
+            <img src="/img/LogoCubo.png" alt="Evolutia Logo"/>
           </a>
 
           {/* Menú Normal */}
