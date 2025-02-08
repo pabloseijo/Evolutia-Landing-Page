@@ -74,30 +74,26 @@ hr {
 
 
 
-/* 🌟 Navbar Estilo Superdeportivo */
+/* 🌟 Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 15px 0; /* 🔹 Reducimos padding para mejorar alineación */
+  padding: 15px 0;
   transition: all 0.5s ease-in-out;
   z-index: 1000;
   display: flex;
   justify-content: center;
-}
-
-/* 🌟 Navbar Transparente en la Landing */
-.navbar:not(.scrolled) {
   background: rgba(0, 0, 0, 0);
 }
 
 /* 🌟 Navbar con Glassmorphism al hacer scroll */
 .navbar.scrolled {
-  background: rgba(26, 26, 26, 0.4); /* 🔥 Fondo semitransparente */
-  backdrop-filter: blur(15px); /* 🔥 Desenfoque tipo Glassmorphism */
-  -webkit-backdrop-filter: blur(15px); /* Compatibilidad con Safari */
+  background: rgba(26, 26, 26, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1); /* 🔥 Borde sutil para el efecto vidrio */
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* 🌟 Contenedor del Navbar */
@@ -119,7 +115,7 @@ hr {
 /* 🌟 Menú de Navegación */
 .navbar-menu {
   display: flex;
-  align-items: center; /* 🔥 Asegura alineación vertical */
+  align-items: center;
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -140,7 +136,7 @@ hr {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   position: relative;
-  padding: 8px 12px; /* 🔥 Ajusta el tamaño de los enlaces */
+  padding: 8px 12px;
 }
 
 /* 🌟 Efecto de Subrayado en Hover */
@@ -159,9 +155,9 @@ hr {
   width: 100%;
 }
 
-/* 🌟 Botón CTA (Empieza) con Glow */
+/* 🌟 Botón CTA (Empieza) */
 .cta-button {
-  padding: 8px 16px; /* 🔹 Mantiene el tamaño original */
+  padding: 8px 16px;
   background: linear-gradient(to right, #ff66b2, #9b59b6);
   color: white !important;
   border-radius: 25px;
@@ -174,54 +170,119 @@ hr {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 40px; /* 🔹 Igual al tamaño de los enlaces */
+  height: 40px;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.3); /* 🔥 Glow inicial más sutil */
+  box-shadow: 0px 4px 10px rgba(255, 102, 178, 0.3);
 }
 
-/* 🌟 Efecto de foco (hover) */
-.cta-button:hover,
-.cta-button:focus {
+/* 🌟 Efecto de hover */
+.cta-button:hover {
   background: linear-gradient(to right, #ff4da6, #a64dff);
-  box-shadow: 0px 0px 20px rgba(255, 102, 178, 0.7); /* 🔥 Glow más fuerte */
-  transform: scale(1.05); /* Pequeño zoom */
-  color: #fff !important;
+  box-shadow: 0px 0px 20px rgba(255, 102, 178, 0.7);
+  transform: scale(1.05);
 }
 
-/* 🌟 Efecto de presión al hacer clic */
+/* 🌟 Efecto de presión */
 .cta-button:active {
-  transform: scale(0.98); /* 🔥 Simula presión */
+  transform: scale(0.98);
   box-shadow: 0px 0px 15px rgba(255, 102, 178, 0.6);
 }
 
-/* 🔥 Elimina bordes y efectos indeseados */
-.cta-button:focus,
-.cta-button:active:focus {
-  outline: none;
+/* 🔥 Ocultar el botón hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none;
 }
 
+/* 🌟 Oculta el menú móvil en pantallas grandes */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
 
-
-
-
-/* Cambia la imagen y el tamaño en pantallas medianas */
+/* 🌟 Menú Hamburguesa (solo en móviles) */
 @media (max-width: 768px) {
-  .navbar-logo {
-    content: url("/img/LogoCubo.jpg"); /* Imagen para móviles */
-    height: 40px;
+  .navbar-menu {
+    display: none; /* 🔥 Oculta el menú normal en móviles */
+  }
+
+  /* Muestra el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Menú lateral oculto */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    z-index: 1100;
+  }
+
+  /* Cuando el menú está abierto */
+  .mobile-menu.open {
+    right: 0;
+  }
+
+  /* Botón para cerrar */
+  .close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Lista del menú */
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mobile-menu ul li {
+    margin: 20px 0;
+  }
+
+  .mobile-menu ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+
+  /* Hover en los enlaces */
+  .mobile-menu ul li a:hover {
+    color: #ff66b2;
+  }
+
+  /* 🔥 Ajuste del botón "Empieza" dentro del menú móvil */
+  .mobile-menu .cta-button {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
   }
 }
 
-/* Ajustes para pantallas muy pequeñas */
-@media (max-width: 480px) {
-  .navbar-brand {
-    padding-left: 10px;
-  }
-  .navbar-logo {
-    height: 30px;
-  }
-}
 
 
 /* Botón personalizado */
@@ -815,8 +876,19 @@ label {
   border-bottom: 2px solid #ff66b2;
 }
 
-/* Para móviles: los elementos se ponen en vertical */
+/* 📱 Para móviles estándar (menos de 768px) */
 @media (max-width: 768px) {
+
+  h1 {
+    font-size: 48px; /* Antes era 82px */
+  }
+  h2 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+
   #features .row {
     display: flex;
     flex-direction: column; /* Se apilan en una columna */
@@ -832,13 +904,19 @@ label {
   #features .col-md-3:last-child {
     margin-bottom: 0; /* Elimina el espacio del último elemento */
   }
+
+  #about .about-list {
+    max-width: 100%; /* Ocupa todo el ancho */
+    text-align: center;
+  }
 }
 
-/* Para tablets: los elementos se colocan en dos columnas */
+
+/* 📟 Para tablets (entre 768px y 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   #features .row {
     display: flex;
-    flex-wrap: row wrap; /* Se colocan en dos filas */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
   }
@@ -847,8 +925,10 @@ label {
     width: 45%; /* Dos columnas */
     text-align: center;
   }
+  
+  #about .about-list {
+    text-align: center;
+  }
 }
-
-
 
 
