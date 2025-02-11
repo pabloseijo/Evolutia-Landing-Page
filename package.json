@@ -1,7 +1,7 @@
 {
   "name": "evolutia-react",
   "private": true,
-  "homepage": "https://github.com/pabloseijo/Evolutia-Landing-Page",
+  "homepage": "https://www.evolutia.dev",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@testing-library/jest-dom": "^4.2.4",

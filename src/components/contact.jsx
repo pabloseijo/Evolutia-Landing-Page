@@ -161,9 +161,8 @@ export const Contact = (props) => {
               </p>
             </div>
           </div>
-          */}
+         
 
-          {/* Sección de Redes Sociales */}
           <div className="col-md-12">
             <div className="row">
               <div className="social">
@@ -187,6 +186,7 @@ export const Contact = (props) => {
               </div>
             </div>
           </div>
+          */}
 
           {/* Sección de Copyright */}
           <div className="col-md-12 text-center copyright">
